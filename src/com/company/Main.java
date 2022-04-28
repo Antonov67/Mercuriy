@@ -59,7 +59,8 @@ public class Main {
                 if (count ==19) break;
             }
             System.out.println("\n" +"0x" + value);
-            System.out.println(Integer.parseInt(value.toString(),16));
+
+            System.out.println(Integer.parseInt(value.toString(),16)+" кВт");
 
         }
         catch (Exception e) {
