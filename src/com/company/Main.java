@@ -39,8 +39,8 @@ public class Main {
             System.out.println("\nчтение времени контроля");
             while(( c = in.read()) != -1) {
                 count++;
-                System.out.print(Integer.toHexString(c));
-                if (count ==4) break;
+                System.out.print(Integer.toHexString(c) + " ");
+                if (count ==9) break;
             }
 
             byte[] bytes4 = {0x5a, 0x05, 0x00, 0x00, 0x02, (byte) 0xfd};//чтение показаний счетчика
@@ -49,8 +49,9 @@ public class Main {
             System.out.println("\nчтение показаний счетчика");
             while(( c = in.read()) != -1) {
                 count++;
-                System.out.print(c+" ");
-               // System.out.print(Integer.toHexString(c));
+               // System.out.print(c+" ")
+                System.out.print(Integer.toHexString(c)+" ");
+
                 if (count ==150) break;
             }
 
