@@ -47,14 +47,19 @@ public class Main {
             out.write(bytes4);
             count=0;
             System.out.println("\nчтение показаний счетчика");
+            StringBuilder value= new StringBuilder();
             while(( c = in.read()) != -1) {
                 count++;
                // System.out.print(c+" ")
                 System.out.print(Integer.toHexString(c)+" ");
+               if (count==4) value.append(Integer.toHexString(c));
+               if (count==5) value.insert(0, Integer.toHexString(c));
 
-                if (count ==150) break;
+
+                if (count ==19) break;
             }
-
+            System.out.println("\n" +"0x" + value);
+            System.out.println(Integer.parseInt(value.toString(),16));
 
         }
         catch (Exception e) {
